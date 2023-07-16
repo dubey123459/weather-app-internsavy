@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="card">
+        <div class="search">
+            
+            <input type="text" placeholder="Enter your city name" spellcheck="false">
+            <button> <img src="./images/search.png" alt=""></button>
+        </div>
+        <div class="weather">
+
+            <div class="container">
+                <div class="grid">
+                    <span class="temp"></span><span class="degree"  >°C</span ><img src="" class="weather-icon"><br>
+                    <span class="description" style="font-weight: lighter; font-size: 15px;">Rain 25/35</span>
+                </div>
+                <div class=" first grid">
+                    <h2 class="city"></h2>
+                    
+                </div>
+                <div class="second grid">
+                    <h4 class="sunrise">00:00</span></h4>
+                    <h4 class="sunset">00:00 </span></h4>
+                </div>
+
+            </div>
+
+
+
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png" alt="">
+                    <div>
+                        <p class="humidity">00%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png" alt="">
+                    <div>
+                        <p class="wind">00km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/humidity.png" alt="">
+                    <div>
+                        <p class="realfeel">00°C</p>
+                        <p>Realfeel </p>
+                    </div>
+                </div>
+                
+
+            </div>
+            <h3 style="margin-top: 20px; ">3-day forecast</h3>
+            <div class="container2">
+                
+                <div id="day1" class=" grid2">
+                    <p>sun</p>
+                <p>2/5</p>
+                <img src="images/mist.png" alt="">
+                <h6>Rain</h6>
+                <p>22°C</p>
+                <p>11.3km/hr</p>
+                </div>
+                <div  id="day2" class="grid2">
+                    <p>sun</p>
+                <p>2/5</p>
+                <img src="images/mist.png" alt="">
+                <h6>Rain</h6>
+                <p>22°C</p>
+                <p>11.3km/hr</p>
+                </div>
+                <div id="day3" class="grid2">
+                    <p>sun</p>
+                <p>2/5</p>
+                <img src="images/mist.png" >
+                <h6 >Rain</h6>
+                <p>22°C</p>
+                <p>11.3km/hr</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

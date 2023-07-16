@@ -1,0 +1,154 @@
+*{
+    
+    margin: 0%;
+    padding: 0;
+    font-family: "poppins",sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    
+}
+
+
+#card{
+    
+    width: 80%;
+    max-width: 470px;
+  background-image: url(./images/Weatherimages/common.png);
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+.city{
+    font-size: larger;
+    
+}
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 30px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 15px;
+}
+.search button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.search button img{
+    width: 16px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 90px;
+}
+.grid{
+    text-align: left;
+    justify-content: center;
+
+}
+.first{
+margin-top: 30px;
+}
+.second{
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.weather-icon{
+    width: 30px;
+    margin-top: 30px;
+}
+
+.weather span{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 0px;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 20px;
+    margin-right: 10px;
+   
+}
+.humidity, .wind {
+    font-size: 15px;
+    margin-top: -6px;
+}
+.container2{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:150px;
+    gap: 5px;
+}
+.grid2{
+    border: 20px solid k;
+    width: 100%;
+    padding: 10px;
+    background-color: #57b3f9;
+    border-radius: 10px;
+}
+.grid2 img{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+.grid2 h6{
+   margin: 0px 0px 1px 0px ;
+  
+}
+
+#day1 p:first-child,#day2 p:first-child,#day3 p:first-child{
+    font-size: 14px;
+}
+#day1 p:nth-child(2),#day2 p:nth-child(2),#day3 p:nth-child(2){
+    font-size: 14px;
+}
+#day1 p:last-child,#day2 p:last-child,#day3 p:last-child{
+font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
