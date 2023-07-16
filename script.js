@@ -11,8 +11,13 @@ const iconurl = "https://openweathermap.org/img/wn/"
 const searchBox = $.querySelector(".search input");
 const searchBtn = $.querySelector(".search button");
 
-const audio = new Audio("./sound/rain1.mp3");
+const audio = new Audio("./sound/rain.mp3");
 const audio2 = new Audio("./sound/thunder.mp3");
+
+
+
+
+
 
 
 
@@ -232,6 +237,30 @@ async function checkforecast(city) {
 }
 
 
+    async function getData(position){
+    
+        const lat  = position.coords.latitude;
+        const long = position.coords.longitude;
+    
+        const response2 =  await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${long}&appid=eaa87ad729c383896280db3849caa75f`);
+        const data1 = await response2.json();
+         checkweather(data1.name);
+         
+        
+    }
+    function failedToGet(){
+        console.log("error")
+     }
+     
+     window.addEventListener("load", async ()=>{
+
+         navigator.geolocation.getCurrentPosition(getData,failedToGet)
+     })
+    
+    
+
+
+
 searchBtn.addEventListener("click", function () {
     const value = searchBox.value;
    
@@ -240,7 +269,7 @@ searchBtn.addEventListener("click", function () {
         checkforecast("Delhi")
     } else {
         checkweather(value);
-        checkforecast(value)
+        checkforecast(value);
     }
 
     $.querySelector(".search input").value = "";
@@ -251,9 +280,9 @@ const onClickEnterBtn =searchBox;
 onClickEnterBtn.addEventListener("keypress",function(e){
 if(e.key === "Enter"){
     searchBtn.click();
-    
 }
 })
+
 
 
 
