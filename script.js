@@ -127,10 +127,11 @@ async function checkweather(city) {
 
 
 
-    const sunrise_date = Number(data.sys.sunrise);
-    const sun_set = data.sys.sunset;
-    const dt =  new Date(sunrise_date * 1000).toLocaleString().slice(10, 15);//fetching sunrise time as per local time
-    const dt2 = new Date(Number(sun_set) * 1000).toLocaleString().slice(10, 15);//fetching sunset time as per local time
+    const sunrise_date = new Date(Number(data.sys.sunrise)* 1000);
+    const sun_set = new Date(Number(data.sys.sunset) * 1000);
+
+    const dt =  sunrise_date.getHours() + ":" + sunrise_date.getMinutes()//fetching sunrise time as per local time
+    const dt2 = sun_set.getHours() + ":" + sun_set.getMinutes();//fetching sunset time as per local time
     $.querySelector(".sunrise").innerHTML = dt + " Sunrise";
     $.querySelector(".sunset").innerHTML = dt2 + " Sunset";
 
@@ -140,7 +141,7 @@ async function checkweather(city) {
 
 //function for getting direction of wind from angle
     const getCardinalDirection = (angle) => {
-        const directions = ['↑ N', '↗ NE', '→ E', '↘ SE', '↓ S', '↙ SW', '← W', '↖ NW'];
+        const directions = [' ↑N', ' ↗NE', ' →E', ' ↘SE', ' ↓S', ' ↙SW', ' ←W', ' ↖NW'];
         return directions[Math.round(angle / 45) % 8];
     }
     const degree = data.wind.deg;

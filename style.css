@@ -21,10 +21,7 @@ body{
     padding: 40px 35px;
     text-align: center;
 }
-.city{
-    font-size: larger;
-    
-}
+
 .search{
     width: 100%;
     display: flex;
@@ -57,21 +54,18 @@ body{
 }
 .container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     grid-template-rows: 90px;
 }
-.grid{
+.grids1{
     text-align: left;
     justify-content: center;
 
 }
-.first{
-margin-top: 30px;
-}
-.second{
-    margin-top: 30px;
-    font-size: 15px;
-    font-weight: 500;
+.grids2{
+    
+   margin-top: 40px;
+    text-align: left;
 }
 
 .weather-icon{
@@ -84,33 +78,37 @@ margin-top: 30px;
     font-weight: 400;
     margin-top: 0px;
 }
-
+.containers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px;
+}
 .details{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px;
+    gap: 10px;
+    justify-content: center;
+    
     margin-top: 50px;
 }
-.col{
-    display: flex;
-    align-items: center;
+.col1,.col3{
     text-align: left;
 }
-.col img{
-    width: 20px;
-    margin-right: 10px;
-   
+.col4,.col2{
+    text-align: right;
+
 }
+
 .humidity, .wind {
     font-size: 15px;
-    margin-top: -6px;
+    
 }
 .container2{
     margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:150px;
+    grid-template-rows:180px;
     gap: 5px;
 }
 .grid2{
